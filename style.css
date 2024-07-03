@@ -1,24 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Manrope", sans-serif;
 }
 
-.container{
-    width:100%;
+:root {
+    --first-color: #13718b;
+    --second-color: #200833;
+    --white-color: #ffff;
+}
+
+.container {
+    width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #13718b;
-}
-.container:nth-child(even){
-    background-color: #200833;
+    background-color: var(--first-color);
 }
 
-#counter{
+.top-heading {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.container:nth-child(even) {
+    background-color: var(--second-color);
+}
+
+#counter {
     width: 30%;
     background: white;
     padding: 20px;
@@ -26,19 +40,75 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction:column;
+    flex-direction: column;
 }
 
-.number{
-    font-size:3rem;
+.number {
+    font-size: 3rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 #btn1{
-    padding: 10px 20px;
-    border:none;
-    background: #13718b;
+    background: var(--first-color);
+}
+
+#btn2,#btn3{
+    background: var(--white-color);
+    color: var(--second-color)
+}
+
+#btn4 {
+    background-color: white;
+    color: var(--first-color);
+}
+
+.para {
+    width: 60%;
+    margin-bottom: 20px;
     color: white;
-    border-radius:30px;
-    cursor:pointer;
+    font-size: 1.3rem;
+    text-align: center;
+    opacity: 1;
+    transition: all 1s linear;
+}
+
+.d-none {
+    opacity: 0;
+}
+
+.para2 {
     margin-top: 20px;
+    font-size:1.4rem;
+    color: white;
+}
+
+ul{
+    margin: 20px;
+    width:50%;
+    display: flex;
+    gap:1rem;
+    flex-direction: column;
+}
+
+.list{
+    background-color: white;
+    color:var(--second-color);
+    text-decoration: none;
+    padding: 10px;
+    border-radius:10px;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    border-radius:10px;
+    border:2px solid white;
 }
